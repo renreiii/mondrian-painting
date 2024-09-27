@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mondrian Project</title>
+		<style>
+			/* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: #fff;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			.canvas {
+				display: flex;
+				width: 748px;
+				height: 748px;
+				background-color: #f0f1ec;
+			}
+
+      .grid {
+        width: 100%;
+        display: grid;
+        background-color: black;
+        gap: 9px;
+        grid-template-columns: 320px calc(198px + 18px) calc(153px - 9px) calc(50px - 9px);
+        grid-template-rows: 414px 130px 155px 20px;
+      }
+
+			.red {
+				background-color: #e72f24;
+			}
+
+      .black {
+        background-color: #232629;
+      }
+
+      .blue {
+        background-color: #004592;
+      }
+
+      .yellow {
+        background-color: #F9D01E;
+      }
+
+			.white {
+				background-color: #f0f1ec;
+			}
+
+      .c-2 {
+        grid-column: span 3;
+      }
+
+      .c-3 {
+        grid-row: span 2;
+      }
+
+      .c-4 {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .c-5 {
+        border-bottom: 10px solid black;
+      }
+
+      .c-6 {
+        grid-row: span 2;
+      }
+		</style>
+	</head>
+
+	<body>
+		<!-- Write your HTML here -->
+		<div class="canvas">
+			<div class="grid">
+				<div class="col c-1 red"></div>
+				<div class="col c-2 white"></div>
+				<div class="col c-3 white"></div>
+				<div class="col c-4 white"></div>
+				<div class="col c-5 blue"></div>
+				<div class="col c-6 white"></div>
+				<div class="col c-7 white"></div>
+				<div class="col c-8 yellow"></div>
+				<div class="col c-9 black"></div>
+			</div>
+		</div>
+	</body>
+</html>
